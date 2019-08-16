@@ -26,6 +26,19 @@ after_success:
 before_deploy:
   - true
 
+deploy:
+  provider: script
+  script: bash .travis/deploy-stage.sh
+  on:
+    branch: master
+deploy:
+  provider: script
+  script: bash .travis/deploy-stage.sh
+  on:
+    tags: true
+    branch:
+      - /^[0-9]$/
+
 # deploy:
 #   provider: releases
 #   skip_cleanup: true
