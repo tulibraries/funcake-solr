@@ -1,0 +1,46 @@
+---
+services:
+  - docker
+
+before_install:
+  - echo -e "machine github.com\n  login $CI_USER_TOKEN" > ~/.netrc
+  - cd ..
+  - git clone --single-branch --branch master https://github.com/tulibraries/ansible-playbook-solrcloud.git
+  - mkdir -p ansible-playbook-solrcloud/data/tmp/collections
+  - cp -r funcake-solr ansible-playbook-solrcloud/data/tmp/collections/
+
+install:
+  - cd ansible-playbook-solrcloud
+  - make up
+  - sleep 30
+  - curl -v 127.0.0.1:8081/solr/asdf
+  - make create-local-collections
+  - make create-aliases
+  - cd ..
+
+script:
+  - curl http://localhost:8081/solr/funcake/admin/ping | jq .status
+
+after_success:
+  - true
+
+before_deploy:
+  - true
+
+# deploy:
+#   provider: releases
+#   skip_cleanup: true
+#   prerelease: false
+#   name: $TRAVIS_TAG release
+#   file:
+#     - $TRAVIS_TAG.tar.gz
+#     - $TRAVIS_TAG.zip
+#   api_key:
+#     secure: AGUiZgxfZVG5c6EvV+n6malKxO3BNDDRfJiHpW+G9zMGnZNTL4Vmmn3tM/rVZ9jvcYHE6nbTvS1GiFftKZ34i/PPgWFeMAUXeX4S8vMXDIpB9V2X9tfTnRxpdMGZtnPL/m2e7ThNXH5djY4W/bAIb/3EcezK5mTDiaLfq0A2DfhYLXoqEprv21Nz1Mq9cP5rpZAMgdv0MYKjovZF3+hyVVkz3hEdDMHgPD/tFszfF3k1T2LVNkvYcq9lEAeJ51BG1hp2vbokd2SBKamyq+S6VvKpN8ysijWVO7CRseXmEbocksDgOi2iBZ/4aalflm/bt/rg0vY75DEwtQ7+ErXkcGU/ojeyRkgWayLdifkcSUqMRsnrmQngGSPEABMV2FThuafdvywZ4WHoqPQls0a2yxJI+nZ38dzCQZ64dTgexGAyCs/goPmmhINloNlFgUI2B6FK42CKXg8xov/PlM/ev20P7Prjk3IuR5PIDWENU2CEXkFYj8A750AXoRVu+BrN37h1xUFA1O92xs2mvjScELxN/t9xGyFKRzLCoufM9sMU4NtZOF5M6sBfioyQvq70Suk96TaZTPTaP5ZuUlkIoDATpsmd4yDa3QiVvlKg+oxvWoG4zyTERAX2H7MtXUisFEEc09wV3ee5/XyCdiK5rZ/OdnHZpXziSE5xHdhXbK4=
+#   on:
+#     repo: tulibraries/funcake-solr
+#     tags: true
+#     branch:
+#       - /^v.*$/
+#
+# notifications:
