@@ -27,17 +27,16 @@ before_deploy:
   - true
 
 deploy:
-  provider: script
-  script: bash .travis/deploy-stage.sh
-  on:
-    branch: master
-deploy:
-  provider: script
-  script: bash .travis/deploy-stage.sh
-  on:
-    tags: true
-    branch:
-      - /^[0-9]$/
+  - provider: script
+    script: bash .travis/deploy-stage.sh
+    on:
+      branch: master
+  - provider: script
+    script: bash .travis/deploy-stage.sh
+    on:
+      tags: true
+      branch:
+        - /^[0-9]$/
 
 # deploy:
 #   provider: releases
