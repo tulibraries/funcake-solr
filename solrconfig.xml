@@ -203,8 +203,6 @@
     </arr>
   </requestHandler>
 
-  <requestHandler name="/replication" class="solr.ReplicationHandler" startup="lazy" />
-
   <requestDispatcher handleSelect="true" >
     <requestParsers enableRemoteStreaming="true" multipartUploadLimitInKB="2048" />
   </requestDispatcher>
