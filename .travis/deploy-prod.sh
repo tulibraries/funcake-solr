@@ -6,4 +6,4 @@ LATEST_RELEASE_ID=$(curl -s https://api.github.com/repos/tulibraries/funcake-sol
 echo $LATEST_TAG
 curl -X POST --header "Content-Type:application/octet-stream" --data-binary @/home/travis/build/tulibraries/ansible-playbook-solrcloud/data/tmp/collections/funcake.zip "https://$SOLR_USER:$SOLR_PASSWORD@solrcloud.tul-infra.page/solr/admin/configs?action=UPLOAD&name=funcake-$LATEST_TAG"
 curl "https://$SOLR_USER:$SOLR_PASSWORD@solrcloud.tul-infra.page/solr/admin/collections?action=CREATEALIAS&name=funcake-$LATEST_TAG"
-curl -X POST -H "Authorization: token $CI_USER_TOKEN" --data-binary @"/home/travis/build/tulibraries/ansible-playbook-solrcloud/data/tmp/collections/funcake.zip" -H "Content-Type: application/octet-stream" "https://uploads.github.com/repos/tulibraries/funcake-solr/releases/$LATEST_RELEASE_ID/assets?name=funcake-$LATEST_TAG.zip"
+curl -X POST -H "Authorization: token $GITHUB_TOKEN" --data-binary @"/home/travis/build/tulibraries/ansible-playbook-solrcloud/data/tmp/collections/funcake.zip" -H "Content-Type: application/octet-stream" "https://uploads.github.com/repos/tulibraries/funcake-solr/releases/$LATEST_RELEASE_ID/assets?name=funcake-$LATEST_TAG.zip"
