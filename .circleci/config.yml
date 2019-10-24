@@ -8,8 +8,6 @@ workflows:
   deploy:
     jobs:
       - run_tests:
-          requires:
-            - run_tests
           filters:
             branches:
               ignore: /.*/
