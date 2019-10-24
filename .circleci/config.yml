@@ -2,9 +2,19 @@ version: 2
 
 workflows:
   version: 2
-  test_and_deploy:
+  test:
     jobs:
       - run_tests
+  deploy:
+    jobs:
+      - run_tests:
+          requires:
+            - run_tests
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /.*/
       - run_deploy:
           requires:
             - run_tests
