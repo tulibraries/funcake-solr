@@ -32,3 +32,7 @@ echo "* Creating prod alias based on configset name."
 echo "***"
 RESP=$(curl -u $SOLR_USER:$SOLR_PASSWORD -i -o - --silent -X POST --header "Content-Type:application/octet-stream" "https://solrcloud.tul-infra.page/solr/admin/collections?action=CREATEALIAS&name=funcake-$CIRCLE_TAG-prod&collections=funcake-$CIRCLE_TAG-init")
 validate_status
+echo "***"
+echo "* Pushing zip file asset to GitHub release."
+echo "***"
+curl -v -X POST -H "Authorization: token $GITHUB_TOKEN" --data-binary @"/home/circleci/solrconfig.zip" -H "Content-Type: application/octet-stream" "https://uploads.github.com/repos/tulibraries/funcake-solr/releases/$CIRCLE_TAG/assets?name=funcake-$CIRCLE_TAG.zip"

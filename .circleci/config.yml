@@ -16,19 +16,17 @@ workflows:
 jobs:
   run_tests:
     machine: true
-
     steps:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "d6:31:51:4e:99:10:73:5c:97:51:06:8c:fb:30:a5:83"
+            - "17:e6:22:64:80:ff:b5:27:08:53:b2:c9:84:f7:b2:10"
       - run:
           name: Set up a local Solr with build's solr config.
           command: bash .circleci/setup_solr.sh
       - run:
           name: Test that we can get to the solr collection successfully.
           command: bash .circleci/test.sh
-
   run_deploy:
     docker:
       - image: circleci/python:3.6.6
@@ -38,7 +36,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "d6:31:51:4e:99:10:73:5c:97:51:06:8c:fb:30:a5:83"
+            - "17:e6:22:64:80:ff:b5:27:08:53:b2:c9:84:f7:b2:10"
       - run:
           name: Build configuration asset
           command: bash .circleci/build.sh
