@@ -23,9 +23,11 @@ workflows:
               only: /.*/
 jobs:
   run_tests:
-    machine: true
+    docker:
+      - image: circleci/python:3.6.6
     steps:
       - checkout
+      - setup_remote_docker
       - add_ssh_keys:
           fingerprints:
             - "17:e6:22:64:80:ff:b5:27:08:53:b2:c9:84:f7:b2:10"
