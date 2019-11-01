@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-STATUS=$(curl http://localhost:8090/solr/funcake/admin/ping?wt=json | jq .status)
+STATUS=$(docker exec solr1 curl http://solr1:8983/solr/funcake/admin/ping?wt=json | jq .status)
 if [ "$STATUS" != '"OK"' ]; then
   echo "Faling because status is not OK"
   echo "status: $STATUS"
