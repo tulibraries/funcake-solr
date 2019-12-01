@@ -44,6 +44,6 @@ validate_status
 echo "***"
 echo "* Pushing zip file asset to GitHub release."
 echo "***"
-RELEASE_ID=$(curl "https://api.github.com/repos/tulibraries/tul_cob-az-solr/releases/latest" | jq .id)
-RESP=$(curl -s -o /dev/null -w "%{http_code}" -X POST -H "Authorization: token $GITHUB_TOKEN" --data-binary @"/home/circleci/solrconfig.zip" -H "Content-Type: application/octet-stream" "https://uploads.github.com/repos/tulibraries/funcake-solr/releases/$RELEASE_ID/assets?name=funcake-$CIRCLE_TAG.zip")
+RELEASE_ID=$(curl "https://api.github.com/repos/tulibraries/funcake-solr/releases/latest" | jq .id)
+RESP=$(curl -s -o /dev/null -w "%{http_code}" -X POST -H "Authorization: token $GITHUB_TOKEN" --data-binary @/home/circleci/solrconfig.zip -H "Content-Type: application/octet-stream" "https://uploads.github.com/repos/tulibraries/funcake-solr/releases/$RELEASE_ID/assets?name=funcake-$CIRCLE_TAG.zip")
 validate_create
