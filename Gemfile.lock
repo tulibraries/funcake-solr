@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/funnel_cake_index.git
-  revision: 09ef38680d4e21996e731cc7492e458210307dd6
+  revision: 0d7e2296fa76a21c9636c70f0b2166e2878b3192
   specs:
     funnel_cake_index (0.0.1)
       gli (~> 2.18)
@@ -11,31 +11,32 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     builder (3.2.4)
     coderay (1.1.3)
     concurrent-ruby (1.1.10)
     diff-lcs (1.5.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    dot-properties (0.1.3)
-    faraday (2.3.0)
-      faraday-net_http (~> 2.0)
+    dot-properties (0.1.4)
+      bundler (>= 2.2.33)
+    faraday (2.7.1)
+      faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
-    faraday-net_http (2.0.2)
+    faraday-net_http (3.0.2)
     ffi (1.15.5)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
     gli (2.21.0)
     hashie (5.0.0)
-    http (5.0.4)
+    http (5.1.0)
       addressable (~> 2.8)
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
       llhttp-ffi (~> 0.4.0)
-    http-cookie (1.0.4)
+    http-cookie (1.0.5)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
     httpclient (2.8.3)
@@ -43,7 +44,7 @@ GEM
     llhttp-ffi (0.4.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
-    marc (1.1.1)
+    marc (1.2.0)
       rexml
       scrub_rb (>= 1.0.1, < 2)
       unf
@@ -57,7 +58,7 @@ GEM
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    public_suffix (4.0.7)
+    public_suffix (5.0.0)
     racc (1.6.0)
     rake (13.0.6)
     rexml (3.2.5)
@@ -79,7 +80,7 @@ GEM
     rspec-support (3.12.0)
     ruby2_keywords (0.0.5)
     scrub_rb (1.0.1)
-    slop (4.9.2)
+    slop (4.9.3)
     traject (3.7.0)
       concurrent-ruby (>= 0.8.0)
       dot-properties (>= 0.1.1)
@@ -93,7 +94,7 @@ GEM
       yell
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.8.1)
+    unf_ext (0.0.8.2)
     yell (2.2.2)
 
 PLATFORMS
