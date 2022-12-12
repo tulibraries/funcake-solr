@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/funnel_cake_index.git
-  revision: 0d7e2296fa76a21c9636c70f0b2166e2878b3192
+  revision: 56fd16abb476c73d3a272aa9ba1ea3a5940e99bd
   specs:
     funnel_cake_index (0.0.1)
       gli (~> 2.18)
@@ -58,7 +58,7 @@ GEM
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    public_suffix (5.0.0)
+    public_suffix (5.0.1)
     racc (1.6.1)
     rake (13.0.6)
     rexml (3.2.5)
@@ -81,7 +81,7 @@ GEM
     ruby2_keywords (0.0.5)
     scrub_rb (1.0.1)
     slop (4.9.3)
-    traject (3.7.0)
+    traject (3.8.1)
       concurrent-ruby (>= 0.8.0)
       dot-properties (>= 0.1.1)
       hashie (>= 3.1, < 6)
