@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/funnel_cake_index.git
-  revision: 8ff3cd421a6c5bbeaa8fd490e84d488091d3c084
+  revision: 99f5fe7079cbb9755daa183b260c02d9496a1a17
   specs:
     funnel_cake_index (0.0.1)
       gli (~> 2.18)
@@ -15,13 +15,13 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     builder (3.2.4)
     coderay (1.1.3)
-    concurrent-ruby (1.1.10)
+    concurrent-ruby (1.2.0)
     diff-lcs (1.5.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     dot-properties (0.1.4)
       bundler (>= 2.2.33)
-    faraday (2.7.2)
+    faraday (2.7.4)
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
@@ -52,7 +52,7 @@ GEM
       marc (~> 1.0)
     method_source (1.0.0)
     mini_portile2 (2.8.1)
-    nokogiri (1.13.10)
+    nokogiri (1.14.0)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     pry (0.14.2)
