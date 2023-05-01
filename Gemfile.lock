@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/funnel_cake_index.git
-  revision: 30e6cce177b21333e768420aa234c28496147193
+  revision: 6eb2b439ae71ad346ec0d34045c489659b840819
   specs:
     funnel_cake_index (0.0.1)
       gli (~> 2.18)
@@ -51,7 +51,7 @@ GEM
     marc-fastxmlwriter (1.1.0)
       marc (~> 1.0)
     method_source (1.0.0)
-    mini_portile2 (2.8.1)
+    mini_portile2 (2.8.2)
     nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
