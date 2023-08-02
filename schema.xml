@@ -222,6 +222,11 @@
   <copyField source="subject_ssim" dest="subject_spell"/>
   <copyField source="title_tsim" dest="title_spell"/>
 
+  <!-- These copy fields are needed for sorting -->
+  <copyField source="creator_ssim" dest="creator_ssort"/>
+  <copyField source="date_ssim" dest="date_ssort"/>
+  <copyField source="title_ssim" dest="title_ssort"/>
+
   <types>
     <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
     <fieldType name="boolean" class="solr.BoolField" sortMissingLast="true"/>
