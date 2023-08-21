@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/funnel_cake_index.git
-  revision: 1fd594373b6a34a3fb0625786d17c2cebcb89d8f
+  revision: 3a93f2146d3ebb388e8429f84bcd9c57d1259ef4
   specs:
     funnel_cake_index (0.0.1)
       gli (~> 2.18)
@@ -52,7 +52,7 @@ GEM
       marc (~> 1.0)
     method_source (1.0.0)
     mini_portile2 (2.8.4)
-    nokogiri (1.15.3)
+    nokogiri (1.15.4)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     pry (0.14.2)
