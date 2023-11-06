@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/funnel_cake_index.git
-  revision: b0d7df831c240a2bc4e4109db3d6061e2ecbcacb
+  revision: 07e55df8e249e65246098f379c7397f6a7a7bd4d
   specs:
     funnel_cake_index (0.0.1)
       gli (~> 2.18)
@@ -61,7 +61,7 @@ GEM
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (5.0.3)
-    racc (1.7.1)
+    racc (1.7.3)
     rake (13.1.0)
     rexml (3.2.6)
     rsolr (2.5.0)
