@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/funnel_cake_index.git
-  revision: 3fa8ddb9fd15cdb5eea4a92b7c15ebf94adb0f9f
+  revision: b969b30c270804075d8855d7024821d676cd3645
   specs:
     funnel_cake_index (0.0.1)
       gli (~> 2.18)
@@ -13,19 +13,17 @@ GEM
   specs:
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
-    base64 (0.2.0)
     builder (3.2.4)
     coderay (1.1.3)
-    concurrent-ruby (1.2.2)
+    concurrent-ruby (1.2.3)
     diff-lcs (1.5.0)
-    domain_name (0.6.20231109)
+    domain_name (0.6.20240107)
     dot-properties (0.1.4)
       bundler (>= 2.2.33)
-    faraday (2.8.1)
-      base64
-      faraday-net_http (>= 2.0, < 3.1)
-      ruby2_keywords (>= 0.0.4)
-    faraday-net_http (3.0.2)
+    faraday (2.9.0)
+      faraday-net_http (>= 2.0, < 3.2)
+    faraday-net_http (3.1.0)
+      net-http
     ffi (1.16.3)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
@@ -52,9 +50,9 @@ GEM
     marc-fastxmlwriter (1.1.0)
       marc (~> 1.0)
     method_source (1.0.0)
-    mini_portile2 (2.8.5)
-    nokogiri (1.15.5)
-      mini_portile2 (~> 2.8.2)
+    net-http (0.4.1)
+      uri
+    nokogiri (1.16.0-x86_64-darwin)
       racc (~> 1.4)
     pry (0.14.2)
       coderay (~> 1.1)
@@ -70,16 +68,15 @@ GEM
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
       rspec-mocks (~> 3.12.0)
-    rspec-core (3.12.0)
+    rspec-core (3.12.2)
       rspec-support (~> 3.12.0)
-    rspec-expectations (3.12.0)
+    rspec-expectations (3.12.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
-    rspec-mocks (3.12.0)
+    rspec-mocks (3.12.6)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
-    rspec-support (3.12.0)
-    ruby2_keywords (0.0.5)
+    rspec-support (3.12.1)
     scrub_rb (1.0.1)
     slop (4.10.1)
     traject (3.8.1)
@@ -96,10 +93,11 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.9.1)
+    uri (0.13.0)
     yell (2.2.2)
 
 PLATFORMS
-  ruby
+  x86_64-darwin-22
 
 DEPENDENCIES
   funnel_cake_index!
@@ -108,4 +106,4 @@ DEPENDENCIES
   rspec
 
 BUNDLED WITH
-   2.1.4
+   2.3.26
