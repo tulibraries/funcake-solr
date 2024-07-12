@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-cp /opt/solr/configs/funcake/solrconfig.xml /var/solr/data/funcake/
-cp /opt/solr/configs/funcake/schema.xml /var/solr/data/funcake/
+cp /opt/solr/conf/funcake/solrconfig.xml /var/solr/data/funcake/
+cp /opt/solr/conf/funcake/schema.xml /var/solr/data/funcake/
 curl 'http://localhost:8983/solr/admin/cores?action=RELOAD&core=funcake'
