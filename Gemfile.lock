@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/funnel_cake_index.git
-  revision: e1e7f972567bc5d221bfe8f60d65d1308ee6781a
+  revision: efa6dc00c44d68b8cc5485e67194e32b34e4d677
   specs:
     funnel_cake_index (0.0.1)
       gli
@@ -40,7 +40,7 @@ GEM
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
       llhttp-ffi (~> 0.5.0)
-    http-cookie (1.0.6)
+    http-cookie (1.0.7)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
     httpclient (2.8.3)
@@ -104,9 +104,7 @@ GEM
       nokogiri (~> 1.9)
       slop (~> 4.0)
       yell
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.9.1)
+    unf (0.2.0)
     uri (0.13.0)
     yell (2.2.2)
 
