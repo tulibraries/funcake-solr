@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/funnel_cake_index.git
-  revision: efa6dc00c44d68b8cc5485e67194e32b34e4d677
+  revision: cefb47151d17a9d12ed7d92c693cb57d9d06851b
   specs:
     funnel_cake_index (0.0.1)
       gli
@@ -21,10 +21,10 @@ GEM
     domain_name (0.6.20240107)
     dot-properties (0.1.4)
       bundler (>= 2.2.33)
-    faraday (2.10.1)
-      faraday-net_http (>= 2.0, < 3.2)
+    faraday (2.11.0)
+      faraday-net_http (>= 2.0, < 3.4)
       logger
-    faraday-net_http (3.1.1)
+    faraday-net_http (3.3.0)
       net-http
     ffi (1.17.0)
     ffi (1.17.0-x86_64-darwin)
@@ -48,7 +48,7 @@ GEM
     llhttp-ffi (0.5.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
-    logger (1.6.0)
+    logger (1.6.1)
     marc (1.2.0)
       rexml
       scrub_rb (>= 1.0.1, < 2)
@@ -72,8 +72,7 @@ GEM
     public_suffix (6.0.1)
     racc (1.8.1)
     rake (13.2.1)
-    rexml (3.3.6)
-      strscan
+    rexml (3.3.7)
     rsolr (2.6.0)
       builder (>= 2.1.2)
       faraday (>= 0.9, < 3, != 2.0.0)
@@ -92,7 +91,6 @@ GEM
     rspec-support (3.13.0)
     scrub_rb (1.0.1)
     slop (4.10.1)
-    strscan (3.1.0)
     traject (3.8.2)
       concurrent-ruby (>= 0.8.0)
       dot-properties (>= 0.1.1)
@@ -105,7 +103,7 @@ GEM
       slop (~> 4.0)
       yell
     unf (0.2.0)
-    uri (0.13.0)
+    uri (0.13.1)
     yell (2.2.2)
 
 PLATFORMS
