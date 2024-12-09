@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/funnel_cake_index.git
-  revision: 85887e3f26bba85e784878b4814575dd17f92195
+  revision: fbb264f4201bb965250c386354d9a2093576d534
   specs:
     funnel_cake_index (0.0.1)
       gli
@@ -41,16 +41,16 @@ GEM
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
       llhttp-ffi (~> 0.5.0)
-    http-cookie (1.0.7)
+    http-cookie (1.0.8)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
     httpclient (2.8.3)
-    json (2.8.2)
+    json (2.9.0)
     library_stdnums (1.6.0)
     llhttp-ffi (0.5.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
-    logger (1.6.1)
+    logger (1.6.2)
     marc (1.2.0)
       rexml
       scrub_rb (>= 1.0.1, < 2)
@@ -59,14 +59,14 @@ GEM
       marc (~> 1.0)
     method_source (1.1.0)
     mini_portile2 (2.8.8)
-    net-http (0.5.0)
+    net-http (0.6.0)
       uri
-    nokogiri (1.16.7)
+    nokogiri (1.17.0)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.16.7-x86_64-darwin)
+    nokogiri (1.17.0-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.16.7-x86_64-linux)
+    nokogiri (1.17.0-x86_64-linux)
       racc (~> 1.4)
     pry (0.15.0)
       coderay (~> 1.1)
