@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/funnel_cake_index.git
-  revision: 36be20a69cbbfd4b02bd7040dc02e1295be38a68
+  revision: a49bb635e43468a05237100bec5c78b7708a1588
   specs:
     funnel_cake_index (0.0.1)
       gli
@@ -21,7 +21,7 @@ GEM
     domain_name (0.6.20240107)
     dot-properties (0.1.4)
       bundler (>= 2.2.33)
-    faraday (2.13.2)
+    faraday (2.13.4)
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
@@ -46,7 +46,7 @@ GEM
     http-form_data (2.3.0)
     httpclient (2.9.0)
       mutex_m
-    json (2.13.0)
+    json (2.13.2)
     library_stdnums (1.6.0)
     llhttp-ffi (0.5.1)
       ffi-compiler (~> 1.0)
