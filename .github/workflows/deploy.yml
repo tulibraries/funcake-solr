@@ -1,0 +1,34 @@
+name: Deploy
+
+on:
+  push:
+    tags:
+      - "[0-9]+"
+
+env:
+  SOLR_USER: ${{ secrets.SOLR_USER }}
+  SOLR_PASSWORD: ${{ secrets.SOLR_PASSWORD }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  RELEASE_TAG: ${{ github.ref_name }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Build configuration asset
+        run: ./.github/scripts/build.sh
+
+      - name: Deploy configuration asset to SolrCloud
+        run: ./.github/scripts/deploy.sh

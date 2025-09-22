@@ -1,4 +1,4 @@
-DOCKER := docker-compose
+DOCKER := docker compose
 
 up:
 	$(DOCKER) up -d
@@ -19,4 +19,6 @@ reload-config:
 ps:
 	$(DOCKER) ps
 zip:
-	bash ./.circleci/build.sh
+	bash ./.github/scripts/build.sh
+zip-gh:
+	bash ./.github/scripts/build.sh
