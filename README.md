@@ -1,5 +1,5 @@
 # Funnel Cake (funcake) Solr Configurations
-[![CircleCI](https://circleci.com/gh/tulibraries/funcake-solr.svg?style=svg)](https://circleci.com/gh/tulibraries/funcake-solr)
+[![CI](https://github.com/tulibraries/funcake-solr/actions/workflows/test.yml/badge.svg)](https://github.com/tulibraries/funcake-solr/actions/workflows/test.yml)
 
 These are the Solr configuration files for the Funnel Cake (PA Digital) internal metadata search & faceting Solr collection.
 
