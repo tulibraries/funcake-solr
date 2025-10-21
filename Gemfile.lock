@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/funnel_cake_index.git
-  revision: 22bda493852af49028dc4df29020ea593804fa6f
+  revision: d89dfcb31d8e668de174c2d73771203f8e5f53ee
   specs:
     funnel_cake_index (0.0.1)
       base64
@@ -23,7 +23,7 @@ GEM
     domain_name (0.6.20240107)
     dot-properties (0.1.4)
       bundler (>= 2.2.33)
-    faraday (2.13.4)
+    faraday (2.14.0)
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
@@ -43,12 +43,12 @@ GEM
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
       llhttp-ffi (~> 0.5.0)
-    http-cookie (1.0.8)
+    http-cookie (1.1.0)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
     httpclient (2.9.0)
       mutex_m
-    json (2.13.2)
+    json (2.15.1)
     library_stdnums (1.6.0)
     llhttp-ffi (0.5.1)
       ffi-compiler (~> 1.0)
@@ -64,12 +64,12 @@ GEM
     mutex_m (0.3.0)
     net-http (0.6.0)
       uri
-    nokogiri (1.18.9)
+    nokogiri (1.18.10)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-darwin)
+    nokogiri (1.18.10-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-linux-gnu)
+    nokogiri (1.18.10-x86_64-linux-gnu)
       racc (~> 1.4)
     ostruct (0.6.3)
     pry (0.15.2)
@@ -109,7 +109,7 @@ GEM
       nokogiri (~> 1.9)
       slop (~> 4.0)
       yell
-    uri (1.0.3)
+    uri (1.0.4)
     yell (2.2.2)
 
 PLATFORMS
