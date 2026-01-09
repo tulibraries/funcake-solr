@@ -1,15 +1,15 @@
-name: Notify on Failure
+name: Workflow Failure Notify
+
+permissions:
+  contents: read
 
 on:
   workflow_run:
-    workflows:
-      - Test
-      - Deploy
-    types:
-      - completed
+    workflows: ["Lint and Test", "QA Deploy", "Prod Deploy"]
+    types: [completed]
 
 jobs:
-  notify:
+  notify_on_failure:
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     uses: tulibraries/.github/.github/workflows/slack-notify.yml@main
     with:
