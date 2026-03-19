@@ -50,7 +50,7 @@ GEM
     httpclient (2.9.0)
       mutex_m
     io-console (0.8.2)
-    json (2.19.1)
+    json (2.19.2)
     library_stdnums (1.6.0)
     llhttp-ffi (0.5.1)
       ffi-compiler (~> 1.0)
