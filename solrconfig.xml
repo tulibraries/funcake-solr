@@ -42,6 +42,7 @@
        -->
         <str name="qf">
           id
+          id_search
           full_title_tsim
           short_title_tsim
           alternative_title_tsim
