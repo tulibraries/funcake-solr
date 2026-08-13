@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require "spec_helper"
 
-RSpec.describe "Very basic searches"do
+RSpec.describe "Very basic searches" do
   solr = RSolr.connect(url: ENV["SOLR_URL"])
 
   let(:per_page) { 10 }
@@ -24,6 +24,25 @@ RSpec.describe "Very basic searches"do
     it "should return one record" do
       expect(records.count).to be == 1;
       expect(records.first[:id]).to eq search_term
+    end
+  end
+
+  context "do a case-insensitive collection search" do
+    let(:search_term) { "science history institute digital collections" }
+
+    let(:response) do
+      solr.get(
+        "search",
+        params: {
+          q: search_term,
+          qf: "${collection_qf}",
+          rows: per_page
+        }
+      )
+    end
+
+    it "returns records from the matching collection" do
+      expect(records.map { |record| record[:id] }).to include("padig:SHI-vag97hr")
     end
   end
 end
