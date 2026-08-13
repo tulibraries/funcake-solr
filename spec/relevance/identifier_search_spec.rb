@@ -64,7 +64,6 @@ RSpec.describe "Identifier searches" do
 
   context "with the default query fields" do
     let(:identifier) { "padig:SHI-vag97hr" }
-    let(:search_term) { 'padig\:shi-*' }
 
     let(:response) do
       solr.get(
@@ -77,8 +76,20 @@ RSpec.describe "Identifier searches" do
       )
     end
 
-    it "returns the record for a differently capitalized wildcard identifier" do
-      expect(records).to include(identifier)
+    context "with a differently capitalized exact identifier" do
+      let(:search_term) { "padig:shi-vag97hr" }
+
+      it "returns the record" do
+        expect(records).to include(identifier)
+      end
+    end
+
+    context "with a differently capitalized wildcard identifier" do
+      let(:search_term) { 'padig\:shi-*' }
+
+      it "returns the record" do
+        expect(records).to include(identifier)
+      end
     end
   end
 end
