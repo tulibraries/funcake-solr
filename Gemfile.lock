@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/tulibraries/funnel_cake_index.git
-  revision: 541f2b6f80368e76404b9b3ca71d61d5957cb05b
+  revision: 2a8808aa27d69fafc020cbf6bb6c875b2d793058
   specs:
     funnel_cake_index (0.0.1)
       base64
@@ -59,6 +59,8 @@ GEM
     nokogiri (1.19.4)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
+    nokogiri (1.19.4-arm64-darwin)
+      racc (~> 1.4)
     nokogiri (1.19.4-x86_64-darwin)
       racc (~> 1.4)
     nokogiri (1.19.4-x86_64-linux-gnu)
@@ -108,6 +110,7 @@ GEM
     yell (2.2.2)
 
 PLATFORMS
+  arm64-darwin-25
   ruby
   x86_64-darwin-22
   x86_64-linux
