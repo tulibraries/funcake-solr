@@ -68,6 +68,13 @@
        </str>
        <str name="contributingInstitution_pf">
        </str>
+
+       <str name="collection_qf">
+         collection_tsim
+       </str>
+       <str name="collection_pf">
+       </str>
+
        <str name="title_qf">
           title_tsim
           full_title_tsim
