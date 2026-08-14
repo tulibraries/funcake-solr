@@ -110,6 +110,7 @@ GEM
     yell (2.2.2)
 
 PLATFORMS
+  arm64-darwin-24
   arm64-darwin-25
   ruby
   x86_64-darwin-22
