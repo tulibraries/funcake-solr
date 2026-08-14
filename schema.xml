@@ -373,12 +373,12 @@
     <fieldType name="identifier_text" class="solr.TextField">
       <analyzer type="index">
         <tokenizer class="solr.KeywordTokenizerFactory"/>
-        <filter class="solr.ICUFoldingFilterFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.TrimFilterFactory"/>
       </analyzer>
       <analyzer type="query">
         <tokenizer class="solr.KeywordTokenizerFactory"/>
-        <filter class="solr.ICUFoldingFilterFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
         <filter class="solr.TrimFilterFactory"/>
       </analyzer>
     </fieldType>

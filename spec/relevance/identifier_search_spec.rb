@@ -41,6 +41,14 @@ RSpec.describe "Identifier searches" do
         expect(records).to include(identifier)
       end
     end
+
+    context "with a non-case character difference" do
+      let(:search_term) { "padig:shí-vag97hr" }
+
+      it "does not return the record" do
+        expect(records).not_to include(identifier)
+      end
+    end
   end
 
   context "with a wildcard identifier" do
