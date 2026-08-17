@@ -25,7 +25,7 @@ echo
 echo "***"
 echo "* Sending funcake-$RELEASE_TAG configs to solrcloud-rocky9."
 echo "***"
-RESP=$(curl -u $SOLR_USER:$SOLR_PASSWORD -i -o - --silent -X POST --header "Content-Type:application/octet-stream" --data-binary @/home/runner/solrconfig.zip "https://solrcloud-rocky9.tul-infra.page/solr/admin/configs?action=UPLOAD&name=funcake-$RELEASE_TAG")
+RESP=$(curl -u $SOLR_USER:$SOLR_PASSWORD -i -o - --silent -X POST --header "Content-Type:application/octet-stream" --data-binary @$HOME/solrconfig.zip "https://solrcloud-rocky9.tul-infra.page/solr/admin/configs?action=UPLOAD&name=funcake-$RELEASE_TAG")
 validate_status
 
 echo
@@ -52,5 +52,5 @@ echo "***"
 echo "* Pushing zip file asset to GitHub release."
 echo "***"
 RELEASE_ID=$(curl "https://api.github.com/repos/tulibraries/funcake-solr/releases/latest" | jq .id)
-RESP=$(curl -s -o /dev/null -w "%{http_code}" -X POST -H "Authorization: token $GITHUB_TOKEN" --data-binary @/home/runner/solrconfig.zip -H "Content-Type: application/octet-stream" "https://uploads.github.com/repos/tulibraries/funcake-solr/releases/$RELEASE_ID/assets?name=funcake-$RELEASE_TAG.zip")
+RESP=$(curl -s -o /dev/null -w "%{http_code}" -X POST -H "Authorization: token $GITHUB_TOKEN" --data-binary @$HOME/solrconfig.zip -H "Content-Type: application/octet-stream" "https://uploads.github.com/repos/tulibraries/funcake-solr/releases/$RELEASE_ID/assets?name=funcake-$RELEASE_TAG.zip")
 validate_create
